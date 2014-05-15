@@ -16,4 +16,9 @@ with gzip.open(root + "/tweets.txt.gz") as tweets:
 
 '''
 1行1ツイートで置換した結果を出力します．
+--
+@hoge やぁ
+を
+<a href="https://twitter.com/#!/hoge">@hoge</a> やぁ
+にします
 '''

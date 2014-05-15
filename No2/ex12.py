@@ -11,5 +11,5 @@ with gzip.open(root + "/tweets.txt.gz") as tweets:
             print tweet
 
 '''
-1行1ツイートそのまま出力します．
+なうが末尾に来るツイートをそのまま1行出力します．
 '''

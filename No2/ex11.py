@@ -11,5 +11,5 @@ with gzip.open(root + "/tweets.txt.gz") as tweets:
             print tweet.encode("UTF-8")
 
 '''
-1行1ツイートそのまま出力します．
+拡散希望含むツイートをそのまま1行出力します．
 '''

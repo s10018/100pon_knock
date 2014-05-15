@@ -12,5 +12,15 @@ with gzip.open(root + "/tweets.txt.gz") as tweets:
             print comment
 
 '''
-1行1ツイートそのまま出力します．
+RT含むツイートの内容をそのまま1行に出力します
+
+ほげ RT @huga: うおお
+うわぁ RT @huga: ？？？？
+
+は
+
+ほげ
+うわぁ
+
+になります
 '''
