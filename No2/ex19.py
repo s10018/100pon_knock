@@ -1,11 +1,8 @@
 # -*- coding: utf-8 -*-
-import gzip
 import re
-import pit
+import sys
 
-root = pit.Pit().get("100pon")["path"]
-
-with gzip.open(root + "/tweets.txt.gz") as tweets:
+with sys.stdin as tweets:
     for tweet in tweets:
         tweet = unicode(tweet.rstrip(), "UTF-8")
         data = re.findall(
