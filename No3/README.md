@@ -5,8 +5,10 @@
 ## 地道な方法
 
 以下のように実行するとmedline.txt 完成 (`extract_medline_abstract.sh` はディレクトリ内のを用いる)
+
 1. ひたすら `http://www.ncbi.nlm.nih.gov/pubmed`でformat(XML)をコピペで手に入れる
 2. 以下を実行
+
 ```
 cat あつめたデータ | ./extract_medline_abstract.sh > medline.txt
 ```
