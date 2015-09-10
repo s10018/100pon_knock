@@ -4,10 +4,7 @@ import sys
 ly_set, ness_set, origin_set = set(), set(), set()
 
 for line in sys.stdin:
-    words = line.rstrip('\n').split('\t')
-    if len(words) < 2:
-        continue
-    word = words[1]
+    word = line.rstrip('\n')
     if word.endswith('ly'):
         ly_set.add(word[:-2])
         origin_set.add(word[:-2])

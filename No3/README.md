@@ -2,18 +2,22 @@
 
 # medline.txtの作り方
 
+## 地道な方法
+
 以下のように実行するとmedline.txt 完成 (`extract_medline_abstract.sh` はディレクトリ内のを用いる)
-
+1. ひたすら `http://www.ncbi.nlm.nih.gov/pubmed`でformat(XML)をコピペで手に入れる
+2. 以下を実行
 ```
-chmod u+x extract_medline_abstract.sh
-./extract_medline_abstract.sh > medline.txt
+cat あつめたデータ | ./extract_medline_abstract.sh > medline.txt
 ```
 
-※ 短時間で頻繁に実行しないこと
+## 楽な方法
+1. [@s10018](https://twitter.com/s_10018 )に問い詰めてmedline.txtを手に入れる
+
+15/09/11: `get_medline_abstract.sh`動かなかったから削除...
 
 ## 必要ツール
 
-- curl (だいたいあると思う)
 - nkf
 
 # (27), (28)
@@ -45,7 +49,7 @@ python ex22.py < medline.txt > medline.txt.sent
 # medline.txt.sent.tokの作り方
 
 ```
-python ex24.py < medline.txt.sent | python ex25.py > medline.txt.sent.tok
+python ex24.py < medline.txt.sent > medline.txt.sent.tok
 ```
 
 # medline.txt.sent.tok.stemの作り方
